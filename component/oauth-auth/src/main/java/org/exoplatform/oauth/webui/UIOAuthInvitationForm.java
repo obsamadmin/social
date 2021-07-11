@@ -58,7 +58,7 @@ import org.gatein.security.oauth.spi.OAuthPrincipal;
 import org.gatein.security.oauth.spi.OAuthProviderType;
 
 import javax.security.auth.login.LoginException;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 @ComponentConfigs({
         @ComponentConfig(lifecycle = UIFormLifecycle.class, template = "war:/groovy/social/webui/oauth/UIOAuthInvitationForm.gtmpl", events = {

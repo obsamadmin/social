@@ -54,7 +54,7 @@ import org.gatein.security.oauth.exception.OAuthException;
 import org.gatein.security.oauth.exception.OAuthExceptionCode;
 import org.gatein.security.oauth.spi.OAuthPrincipal;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * This class is clone and modified from @{org.exoplatform.portal.webui.register.UIRegisterOAuth} in gatein-portal

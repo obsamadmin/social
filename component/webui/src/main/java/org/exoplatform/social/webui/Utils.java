@@ -18,8 +18,8 @@ package org.exoplatform.social.webui;
 
 import java.util.*;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpUtils;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpUtils;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
@@ -61,6 +61,7 @@ import org.exoplatform.web.url.navigation.NavigationResource;
 import org.exoplatform.web.url.navigation.NodeURL;
 import org.exoplatform.webui.application.WebuiRequestContext;
 import org.exoplatform.webui.application.portlet.PortletRequestContext;
+
 
 /**
  * Contains some common methods for using as utility.<br>

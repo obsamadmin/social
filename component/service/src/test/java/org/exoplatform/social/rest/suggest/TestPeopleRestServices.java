@@ -2,7 +2,7 @@ package org.exoplatform.social.rest.suggest;
 
 import java.util.*;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.SecurityContext;
 
 import org.json.JSONObject;
