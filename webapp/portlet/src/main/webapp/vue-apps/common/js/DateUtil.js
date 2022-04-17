@@ -55,7 +55,7 @@ export function getISODate(dateObj) {
   if (!dateObj) {
     return null;
   }
-  return dateObj.toISOString().substr(0,10);
+  return new Date(dateObj.getTime() - (dateObj.getTimezoneOffset() * 60000)).toISOString().substring(0,10);
 }
 
 /**
