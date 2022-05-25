@@ -16,7 +16,7 @@ document.dispatchEvent(new CustomEvent('displayTopBarLoading'));
 const lang = eXo && eXo.env.portal.language || 'en';
 
 //should expose the locale ressources as REST API 
-const url = `${eXo.env.portal.context}/${eXo.env.portal.rest}/i18n/bundle/locale.portlet.social.UserSettings-${lang}.json`;
+const url = `${eXo.env.portal.context}/${eXo.env.portal.rest}/i18n/bundle/locale.portlet.social.UserSettings-${lang.replace('-', '_')}.json`;
 
 const appId = 'UserSettingLanguage';
 
