@@ -37,6 +37,7 @@ import org.exoplatform.social.core.jpa.storage.entity.SpaceEntity;
 import org.exoplatform.social.core.jpa.storage.entity.SpaceEntity.PRIORITY;
 import org.exoplatform.social.core.jpa.storage.entity.SpaceEntity.REGISTRATION;
 import org.exoplatform.social.core.jpa.storage.entity.SpaceEntity.VISIBILITY;
+import org.exoplatform.social.core.jpa.storage.entity.SpaceEntity.POST_RESTRICTION;
 import org.exoplatform.social.core.jpa.storage.entity.SpaceMemberEntity;
 import org.exoplatform.social.core.jpa.storage.entity.SpaceMemberEntity.Status;
 import org.exoplatform.social.core.relationship.model.Relationship;
@@ -277,6 +278,9 @@ public class EntityConverterUtils {
     spaceEntity.setPriority(priority);
     if (space.getRegistration() != null) {
       spaceEntity.setRegistration(REGISTRATION.valueOf(space.getRegistration().toUpperCase()));
+    }
+    if (space.getPostRestriction()!= null) {
+      spaceEntity.setPostRestriction(POST_RESTRICTION.valueOf(space.getPostRestriction().toUpperCase()));
     }
     spaceEntity.setUrl(space.getUrl());
     VISIBILITY visibility = null;

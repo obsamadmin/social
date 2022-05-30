@@ -39,6 +39,8 @@ public class SpaceData implements CacheData<Space> {
   private final String description;
   private final String type;
   private final String visibility;
+
+  private final String postRestriction;
   private final String priority;
   private final String avatarUrl;
   private final String bannerUrl;
@@ -66,6 +68,7 @@ public class SpaceData implements CacheData<Space> {
     description = space.getDescription();
     type = space.getType();
     visibility = space.getVisibility();
+    postRestriction = space.getPostRestriction();
     priority = space.getPriority();
     avatarLastUpdated = space.getAvatarLastUpdated();
     bannerLastUpdated = space.getBannerLastUpdated();
@@ -97,6 +100,7 @@ public class SpaceData implements CacheData<Space> {
     space.setDescription(description);
     space.setType(type);
     space.setVisibility(visibility);
+    space.setPostRestriction(postRestriction);
     space.setPriority(priority);
     space.setAvatarLastUpdated(avatarLastUpdated);
     space.setBannerLastUpdated(bannerLastUpdated);
@@ -135,6 +139,10 @@ public class SpaceData implements CacheData<Space> {
 
   public String getRegistration() {
     return registration;
+  }
+
+  public String getPostRestriction() {
+    return postRestriction;
   }
 
   public String getDescription() {
@@ -202,6 +210,7 @@ public class SpaceData implements CacheData<Space> {
             Objects.equals(description, spaceData.description) &&
             Objects.equals(type, spaceData.type) &&
             Objects.equals(visibility, spaceData.visibility) &&
+            Objects.equals(postRestriction, spaceData.postRestriction) &&
             Objects.equals(priority, spaceData.priority) &&
             Objects.equals(avatarUrl, spaceData.avatarUrl) &&
             Objects.equals(bannerUrl, spaceData.bannerUrl) &&
@@ -219,7 +228,7 @@ public class SpaceData implements CacheData<Space> {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, app, prettyName, displayName, registration, description, type, visibility,
+    return Objects.hash(id, app, prettyName, displayName, registration, description, type, visibility, postRestriction,
             priority, avatarUrl, bannerUrl, groupId, url, avatarLastUpdated, bannerLastUpdated, createdTime,
             members, managers, redactors, pendingUser, invitedUser);
   }

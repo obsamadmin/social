@@ -727,6 +727,9 @@ public class RDBMSSpaceStorageImpl implements SpaceStorage {
     if (entity.getVisibility() != null) {
       space.setVisibility(entity.getVisibility().name().toLowerCase());
     }
+    if (entity.getPostRestriction()!= null) {
+      space.setPostRestriction(entity.getPostRestriction().name().toLowerCase());
+    }
     if (entity.getPriority() != null) {
       switch (entity.getPriority()) {
         case HIGH:

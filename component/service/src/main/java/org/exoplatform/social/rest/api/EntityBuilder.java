@@ -494,6 +494,7 @@ public class EntityBuilder {
     spaceEntity.setBannerUrl(space.getBannerUrl());
     spaceEntity.setVisibility(space.getVisibility());
     spaceEntity.setSubscription(space.getRegistration());
+    spaceEntity.setPostRestriction(space.getPostRestriction());
     spaceEntity.setMembersCount(space.getMembers() == null ? 0 : space.getMembers().length);
     spaceEntity.setManagersCount(space.getManagers() == null ? 0 : space.getManagers().length);
     spaceEntity.setRedactorsCount(space.getRedactors() == null ? 0 : space.getRedactors().length);

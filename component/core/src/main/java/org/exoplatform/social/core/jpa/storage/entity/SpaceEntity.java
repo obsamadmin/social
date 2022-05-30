@@ -94,6 +94,9 @@ public class SpaceEntity implements Serializable {
   @Column(name = "REGISTRATION")
   private REGISTRATION            registration;
 
+  @Column(name = "POST_RESTRICTION")
+  private POST_RESTRICTION postRestriction;
+
   @Column(name = "DESCRIPTION")
   private String            description;
 
@@ -166,6 +169,14 @@ public class SpaceEntity implements Serializable {
 
   public void setRegistration(REGISTRATION registration) {
     this.registration = registration;
+  }
+
+  public POST_RESTRICTION getPostRestriction() {
+    return postRestriction;
+  }
+
+  public void setPostRestriction(POST_RESTRICTION postRestriction) {
+    this.postRestriction = postRestriction;
   }
 
   public String getDescription() {
@@ -299,5 +310,9 @@ public class SpaceEntity implements Serializable {
 
   public static enum REGISTRATION {
     OPEN, VALIDATION, CLOSED
+  }
+
+  public static enum POST_RESTRICTION {
+    OPEN, RESTRICTED
   }
 }

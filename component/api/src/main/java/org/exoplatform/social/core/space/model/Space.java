@@ -73,6 +73,9 @@ public class Space implements CacheEntry {
   /** The registration. */
   private String registration;
 
+  /** The postRestriction. */
+  private String postRestriction;
+
   /** The priority. */
   private String priority;
 
@@ -180,6 +183,10 @@ public class Space implements CacheEntry {
 
   /** The Constant CLOSED. */
   public final static String CLOSED = "closed";
+
+  /** The Constant CLOSED. */
+  public final static String RESTRICTED = "restricted";
+
 
   /** The Constant HIGH_PRIORITY. */
   public final static String HIGH_PRIORITY = "1";
@@ -525,6 +532,24 @@ public class Space implements CacheEntry {
    */
   public void setRegistration(String registration) {
     this.registration = registration;
+  }
+
+  /**
+   * Gets the postRestriction.
+   *
+   * @return the postRestriction
+   */
+  public String getPostRestriction() {
+    return postRestriction;
+  }
+
+  /**
+   * Sets the postRestriction.
+   *
+   * @param postRestriction the new postRestriction
+   */
+  public void setPostRestriction(String postRestriction) {
+    this.postRestriction = postRestriction;
   }
 
   /**

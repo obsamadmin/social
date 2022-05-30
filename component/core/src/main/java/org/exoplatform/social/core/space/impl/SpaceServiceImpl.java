@@ -1451,7 +1451,9 @@ public class SpaceServiceImpl implements SpaceService {
   @Override
   public boolean canRedactOnSpace(Space space, org.exoplatform.services.security.Identity viewer) {
     String username = viewer.getUserId();
-    return (isMember(space, username) && (!hasRedactor(space) || isRedactor(space, username) || viewer.isMemberOf(PLATFORM_WEB_CONTRIBUTORS_GROUP, "publisher")))
+    /**return (isMember(space, username) && (!hasRedactor(space) || isRedactor(space, username) || viewer.isMemberOf(PLATFORM_WEB_CONTRIBUTORS_GROUP, "publisher")))
+            || isManagerOrSpaceManager(viewer, space);*/
+    return (isMember(space, username) && (space.getPostRestriction().equals(Space.OPEN) || isRedactor(space, username) || viewer.isMemberOf(PLATFORM_WEB_CONTRIBUTORS_GROUP, "publisher")))
         || isManagerOrSpaceManager(viewer, space);
   }
 

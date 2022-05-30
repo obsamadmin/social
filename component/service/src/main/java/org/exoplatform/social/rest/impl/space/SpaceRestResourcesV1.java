@@ -1197,6 +1197,14 @@ public class SpaceRestResourcesV1 implements SpaceRestResources {
     } else if (StringUtils.isBlank(model.getSubscription()) && space.getId() == null) {
       space.setRegistration(Space.VALIDATION);
     }
+
+    if (StringUtils.equalsIgnoreCase(Space.RESTRICTED, model.getPostRestriction())) {
+      space.setPostRestriction(Space.RESTRICTED);
+    } else if (StringUtils.equalsIgnoreCase(Space.OPEN, model.getPostRestriction())) {
+      space.setPostRestriction(Space.OPEN);
+    } else if (StringUtils.isBlank(model.getPostRestriction()) && space.getId() == null) {
+      space.setPostRestriction(Space.RESTRICTED);
+    }
   }
 
   @GET

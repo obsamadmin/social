@@ -137,6 +137,7 @@ public class SpaceDAOTest extends BaseCoreTest {
     assertEquals(spaceEntity.getGroupId(), result.getGroupId());
     assertEquals(spaceEntity.getPriority(), result.getPriority());
     assertEquals(spaceEntity.getRegistration(), result.getRegistration());
+    assertEquals(spaceEntity.getPostRestriction(), result.getPostRestriction());
     assertEquals(spaceEntity.getUrl(), result.getUrl());
     assertEquals(spaceEntity.getUrl(), result.getUrl());
     assertEquals(spaceEntity.getVisibility(), result.getVisibility());

@@ -102,6 +102,19 @@
                 {{ $t(`spacesList.description.${space.visibility || 'hidden'}`) }}
               </div>
               <div class="d-flex flex-wrap pt-2">
+                <label for="hidden" class="v-label theme--light my-auto float-left">
+                  {{ $t('SpaceSettings.label.post.restriction') }}
+                </label>
+                <v-switch
+                    v-model="space.postRestriction"
+                    true-value="restricted"
+                    false-value="open"
+                    class="float-left my-0 ms-4" />
+              </div>
+              <div class="caption font-italic font-weight-light ps-1 muted mb-2 mt-1">
+                {{ $t(`SpaceSettings.description.post.restriction.${space.postRestriction || 'open'}`) }}
+              </div>
+              <div class="d-flex flex-wrap pt-2">
                 <label for="hidden" class="v-label theme--light">
                   {{ $t('spacesList.label.registration') }}
                 </label>
@@ -347,6 +360,7 @@ export default {
       this.space = {
         subscription: 'open',
         visibility: 'private',
+        postRestriction: 'restricted'
       };
       this.setSpaceTemplateProperties();
       this.title= this.$t('spacesList.label.addNewSpace');
@@ -423,6 +437,7 @@ export default {
           displayName: this.space.displayName,
           description: this.space.description,
           visibility: this.space.visibility,
+          postRestriction: this.space.postRestriction,
           subscription: this.space.subscription,
           invitedMembers: this.space.invitedMembers,
         })

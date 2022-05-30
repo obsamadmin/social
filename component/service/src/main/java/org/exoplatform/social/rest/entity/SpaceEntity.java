@@ -160,6 +160,15 @@ public class SpaceEntity extends BaseEntity {
     return getString("subscription");
   }
 
+  public SpaceEntity setPostRestriction(String postRestriction) {
+    setProperty("postRestriction", postRestriction);
+    return this;
+  }
+
+  public String getPostRestriction() {
+    return getString("postRestriction");
+  }
+
   public SpaceEntity setDescription(String description) {
     setProperty("description", description);
     return this;

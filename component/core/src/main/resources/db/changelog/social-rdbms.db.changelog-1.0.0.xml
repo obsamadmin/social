@@ -827,4 +827,10 @@
     <createSequence sequenceName="SEQ_SOC_ACTIVITY_SHARE_ACTIONS_ID" startValue="1"/>  
   </changeSet>
 
+  <changeSet author="metadata" id="1.0.0-84">
+    <addColumn tableName="SOC_SPACES">
+      <column name="POST_RESTRICTION" type="TINYINT" />
+    </addColumn>
+  </changeSet>
+
 </databaseChangeLog>
